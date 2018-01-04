@@ -756,19 +756,19 @@ module.exports = function(RED) {
 		service.GetSignedUrl=function(svc,msg,cb){
 			var params={};
 			//copyArgs
-			var op={};
+			var action={};
 
-			copyArg(n,"Operation",op);
+			copyArg(n,"Action",action);
 			copyArg(n,"Bucket",params);
 			copyArg(n,"Key",params);
 			copyArg(n,"Expires",params);
 
-			copyArg(msg,"Operation",op);
+			copyArg(msg,"Action",action);
 			copyArg(msg,"Bucket",params);
 			copyArg(msg,"Key",params);
 			copyArg(msg,"Expires",params);
 
-			var url=svc.getSignedUrl(op.Operation||'getObject',params);
+			var url=svc.getSignedUrl(action.Action||'getObject',params);
 			cb(null,url);
 		}
 		

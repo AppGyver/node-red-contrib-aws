@@ -201,9 +201,9 @@
 		<label for="node-input-Key"><i class="fa fa-tag"></i>Key</label>
 		<input type="text" id="node-input-Key" placeholder="Key"></input>
 	</div> 
-	<div class="form-row" id='OperationAttr' class='hiddenAttrs'>
-		<label for="node-input-Operation"><i class="fa fa-tag"></i>Operation</label>
-		<input type="text" id="node-input-Operation" placeholder="getObject"></input>
+	<div class="form-row" id='ActionAttr' class='hiddenAttrs'>
+		<label for="node-input-Action"><i class="fa fa-tag"></i>Action</label>
+		<input type="text" id="node-input-Action" placeholder="getObject"></input>
 	</div> 
 	<div class="form-row" id='ExpiresAttr' class='hiddenAttrs'>
 		<label for="node-input-Expires"><i class="fa fa-tag"></i>Expires</label>
@@ -417,7 +417,7 @@
 					'#BucketAttr','#KeyAttr'
 					],
 				GetSignedUrl:[
-					'#BucketAttr','#KeyAttr','#OperationAttr',"#ExpiresAttr"
+					'#BucketAttr','#KeyAttr','#ActionAttr',"#ExpiresAttr"
 					],
 				HeadBucket:[
 					'#BucketAttr'
@@ -557,6 +557,8 @@ NOTE: Parameters must be specified in the message, using the case specified in t
 			
 				Bucket: { value: ""} ,
 				Key: { value: ""} ,
+				Action: { value: ""} ,
+				Expires: { value: ""} ,
 				UploadId: { value: ""} ,
 				CopySource: { value: ""} ,
 				Id: { value: ""} ,
