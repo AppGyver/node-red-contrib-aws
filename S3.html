@@ -197,13 +197,17 @@
 		<label for="node-input-Bucket"><i class="fa fa-tag"></i>Bucket</label>
 		<input type="text" id="node-input-Bucket" placeholder="Bucket"></input>
 	</div> 
-	<div class="form-row" id='OperationAttr' class='hiddenAttrs'>
-		<label for="node-input-Operation"><i class="fa fa-tag"></i>Operation</label>
-		<input type="text" id="node-input-Operation" placeholder="Operation"></input>
-	</div> 
 	<div class="form-row" id='KeyAttr' class='hiddenAttrs'>
 		<label for="node-input-Key"><i class="fa fa-tag"></i>Key</label>
 		<input type="text" id="node-input-Key" placeholder="Key"></input>
+	</div> 
+	<div class="form-row" id='OperationAttr' class='hiddenAttrs'>
+		<label for="node-input-Operation"><i class="fa fa-tag"></i>Operation</label>
+		<input type="text" id="node-input-Operation" placeholder="getObject"></input>
+	</div> 
+	<div class="form-row" id='ExpiresAttr' class='hiddenAttrs'>
+		<label for="node-input-Expires"><i class="fa fa-tag"></i>Expires</label>
+		<input type="text" id="node-input-Expires" placeholder="900 (seconds)"></input>
 	</div> 
 	<div class="form-row" id='UploadIdAttr' class='hiddenAttrs'>
 		<label for="node-input-UploadId"><i class="fa fa-tag"></i>UploadId</label>
@@ -413,7 +417,7 @@
 					'#BucketAttr','#KeyAttr'
 					],
 				GetSignedUrl:[
-					'#BucketAttr','#KeyAttr','#OperationAttr'
+					'#BucketAttr','#KeyAttr','#OperationAttr',"#ExpiresAttr"
 					],
 				HeadBucket:[
 					'#BucketAttr'

@@ -761,12 +761,14 @@ module.exports = function(RED) {
 			copyArg(n,"Operation",op);
 			copyArg(n,"Bucket",params);
 			copyArg(n,"Key",params);
+			copyArg(n,"Expires",params);
 
-			copyArg(n,"Operation",op);
+			copyArg(msg,"Operation",op);
 			copyArg(msg,"Bucket",params);
 			copyArg(msg,"Key",params);
+			copyArg(msg,"Expires",params);
 
-			var url=svc.getSignedUrl(op.operation||'getObject',params);
+			var url=svc.getSignedUrl(op.Operation||'getObject',params);
 			cb(null,url);
 		}
 		
