@@ -767,7 +767,7 @@ module.exports = function(RED) {
 			copyArg(msg,"Key",params);
 
 			var url=svc.getSignedUrl(op.operation||'getObject',params);
-			cb(url);
+			cb(null,url);
 		}
 		
 		service.HeadBucket=function(svc,msg,cb){
