@@ -753,6 +753,22 @@ module.exports = function(RED) {
 			svc.getObjectTorrent(params,cb);
 		}
 
+		service.GetSignedUrl=function(svc,msg,cb){
+			var params={};
+			//copyArgs
+			var op={};
+
+			copyArg(n,"Operation",op);
+			copyArg(n,"Bucket",params);
+			copyArg(n,"Key",params);
+
+			copyArg(n,"Operation",op);
+			copyArg(msg,"Bucket",params);
+			copyArg(msg,"Key",params);
+
+			var url=svc.getSignedUrl(op.operation||'getObject',params);
+			cb(url);
+		}
 		
 		service.HeadBucket=function(svc,msg,cb){
 			var params={};

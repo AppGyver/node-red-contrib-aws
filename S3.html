@@ -111,6 +111,8 @@
 			<option value="GetObjectTagging">GetObjectTagging</option>
 		
 			<option value="GetObjectTorrent">GetObjectTorrent</option>
+
+			<option value="GetSignedUrl">GetSignedUrl</option>
 		
 			<option value="HeadBucket">HeadBucket</option>
 		
@@ -194,6 +196,10 @@
 	<div class="form-row" id='BucketAttr' class='hiddenAttrs'>
 		<label for="node-input-Bucket"><i class="fa fa-tag"></i>Bucket</label>
 		<input type="text" id="node-input-Bucket" placeholder="Bucket"></input>
+	</div> 
+	<div class="form-row" id='OperationAttr' class='hiddenAttrs'>
+		<label for="node-input-Operation"><i class="fa fa-tag"></i>Operation</label>
+		<input type="text" id="node-input-Operation" placeholder="Operation"></input>
 	</div> 
 	<div class="form-row" id='KeyAttr' class='hiddenAttrs'>
 		<label for="node-input-Key"><i class="fa fa-tag"></i>Key</label>
@@ -406,6 +412,9 @@
 				GetObjectTorrent:[
 					'#BucketAttr','#KeyAttr'
 					],
+				GetSignedUrl:[
+					'#BucketAttr','#KeyAttr','#OperationAttr'
+					],
 				HeadBucket:[
 					'#BucketAttr'
 					],
@@ -577,4 +586,3 @@ NOTE: Parameters must be specified in the message, using the case specified in t
 		}
 	});
 </script>
-
